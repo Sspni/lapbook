@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lapbook Digital — Inteligencia Artificial</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===================== PORTADA ===================== -->
+<section id="portada" class="portada">
+  <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar modo claro/oscuro">🌙</button>
+  <div class="portada-content">
+    <span class="eyebrow">Lapbook digital</span>
+    <h1>Inteligencia<br>Artificial</h1>
+    <p class="subtitulo">Una mirada al presente y al futuro</p>
+    <dl class="ficha">
+      <div><dt>Nombre</dt><dd>[NOMBRE]</dd></div>
+      <div><dt>Grado</dt><dd>11°</dd></div>
+      <div><dt>Institución</dt><dd>[INSTITUCIÓN]</dd></div>
+      <div><dt>Materia</dt><dd>[MATERIA]</dd></div>
+      <div><dt>Docente</dt><dd>[DOCENTE]</dd></div>
+      <div><dt>Año</dt><dd>2026</dd></div>
+    </dl>
+    <button id="btn-comenzar" class="btn-primario">Comenzar lapbook</button>
+  </div>
+</section>
+
+<!-- ===================== LAPBOOK ===================== -->
+<main id="lapbook" class="lapbook oculto" aria-hidden="true">
+
+  <header class="lapbook-header">
+    <h2>Inteligencia Artificial</h2>
+    <div class="progreso" aria-label="Progreso de lectura">
+      <div id="progreso-barra" class="progreso-barra"></div>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs-principal" aria-label="Secciones principales">
+    <button class="tab activa" data-tab="que-es">¿Qué es?</button>
+    <button class="tab" data-tab="historia">Historia</button>
+    <button class="tab" data-tab="tipos">Tipos de IA</button>
+    <button class="tab" data-tab="aprendizaje">¿Cómo aprende?</button>
+    <button class="tab" data-tab="ml-dl">ML y DL</button>
+    <button class="tab" data-tab="generativa">IA generativa</button>
+    <button class="tab" data-tab="aplicaciones">Aplicaciones</button>
+    <button class="tab" data-tab="beneficios">Beneficios</button>
+    <button class="tab" data-tab="riesgos">Riesgos</button>
+    <button class="tab" data-tab="profesiones">IA y profesiones</button>
+    <button class="tab" data-tab="etica">Ética</button>
+    <button class="tab" data-tab="educacion">IA en educación</button>
+  </nav>
+
+  <nav class="tabs tabs-secundaria" id="tabs-secundaria" aria-label="Módulos secundarios">
+    <button class="tab tab-secundaria" data-tab="mitos">Mitos y realidades</button>
+    <button class="tab tab-secundaria" data-tab="glosario">Glosario</button>
+    <button class="tab tab-secundaria" data-tab="quiz">Quiz</button>
+    <button class="tab tab-secundaria" data-tab="reflexion">Reflexión final</button>
+  </nav>
+
+  <div id="paneles" class="paneles">
+
+    <!-- 1. QUÉ ES -->
+    <section id="que-es" class="panel activo">
+      <h3>¿Qué es la Inteligencia Artificial?</h3>
+      <p>La IA es la capacidad de un sistema informático para realizar tareas que normalmente requieren inteligencia humana: reconocer patrones, tomar decisiones, entender lenguaje o generar contenido. No "piensa" como una persona: procesa datos y encuentra patrones matemáticos en ellos.</p>
+      <div class="comparacion">
+        <div class="card"><strong>Programación tradicional</strong><p>Reglas → Datos → Resultado</p></div>
+        <div class="card acento"><strong>Inteligencia Artificial</strong><p>Datos → Aprendizaje → Patrones → Resultado</p></div>
+      </div>
+      <p>Ejemplos cotidianos: recomendaciones de video, asistentes de voz, filtros de spam y traductores automáticos.</p>
+    </section>
+
+    <!-- 2. HISTORIA -->
+    <section id="historia" class="panel">
+      <h3>Historia de la IA</h3>
+      <ol class="timeline">
+        <li><strong>Alan Turing (1950)</strong><p>Propone la pregunta "¿pueden pensar las máquinas?"</p></li>
+        <li><strong>Test de Turing</strong><p>Prueba para evaluar si una máquina imita la conversación humana.</p></li>
+        <li><strong>Conferencia de Dartmouth (1956)</strong><p>Nace oficialmente el término "Inteligencia Artificial".</p></li>
+        <li><strong>Sistemas expertos (1970s-80s)</strong><p>Programas basados en reglas para tareas específicas.</p></li>
+        <li><strong>Machine Learning (1990s-2000s)</strong><p>Los sistemas empiezan a aprender de datos en vez de reglas fijas.</p></li>
+        <li><strong>IA generativa moderna (2020s)</strong><p>Modelos capaces de crear texto, imágenes y código de forma realista.</p></li>
+      </ol>
+    </section>
+
+    <!-- 3. TIPOS -->
+    <section id="tipos" class="panel">
+      <h3>Tipos de IA</h3>
+      <div class="grid-3">
+        <div class="card"><strong>IA estrecha</strong><p>Realiza una tarea específica muy bien. Es la única que existe hoy (ej: asistentes, recomendadores).</p></div>
+        <div class="card"><strong>IA general</strong><p>Concepto de una IA con capacidades similares a las humanas en cualquier tarea. Aún no existe.</p></div>
+        <div class="card"><strong>Superinteligencia</strong><p>Idea hipotética de una IA que supera ampliamente la capacidad humana.</p></div>
+      </div>
+    </section>
+
+    <!-- 4. CÓMO APRENDE -->
+    <section id="aprendizaje" class="panel">
+      <h3>¿Cómo aprende una IA?</h3>
+      <p>Una IA aprende analizando grandes cantidades de datos, encontrando patrones y ajustando sus parámetros internos hasta lograr predicciones útiles. Mientras más datos y ejemplos recibe, más precisa puede volverse su respuesta.</p>
+    </section>
+
+    <!-- 5. ML Y DL -->
+    <section id="ml-dl" class="panel">
+      <h3>Machine Learning y Deep Learning</h3>
+      <div class="grid-3">
+        <div class="card"><strong>Supervisado</strong><p>Aprende con datos ya etiquetados (ej: fotos marcadas como "gato").</p></div>
+        <div class="card"><strong>No supervisado</strong><p>Encuentra patrones ocultos sin etiquetas previas.</p></div>
+        <div class="card"><strong>Por refuerzo</strong><p>Aprende por prueba y error, recibiendo recompensas.</p></div>
+      </div>
+      <h4>Deep Learning</h4>
+      <div class="diagrama-red" aria-hidden="true">
+        <div class="capa">○ ○ ○</div>
+        <div class="capa">○ ○ ○ ○</div>
+        <div class="capa">○ ○ ○</div>
+      </div>
+      <p>El Deep Learning usa redes neuronales de varias capas y es un subconjunto del Machine Learning, especialmente potente para imágenes, voz y texto.</p>
+    </section>
+
+    <!-- 6. GENERATIVA -->
+    <section id="generativa" class="panel">
+      <h3>IA generativa</h3>
+      <p>Puede generar contenido nuevo: texto, imágenes, código, audio y video, a partir de instrucciones (prompts).</p>
+      <div class="advertencia">⚠️ La IA generativa puede producir resultados incorrectos y siempre debe verificarse la información.</div>
+    </section>
+
+    <!-- 7. APLICACIONES (JS) -->
+    <section id="aplicaciones" class="panel">
+      <h3>Aplicaciones</h3>
+      <div id="grid-aplicaciones" class="grid-cards" data-source="applications"></div>
+    </section>
+
+    <!-- 8. BENEFICIOS (JS) -->
+    <section id="beneficios" class="panel">
+      <h3>Beneficios</h3>
+      <div id="grid-beneficios" class="grid-cards" data-source="benefits"></div>
+    </section>
+
+    <!-- 9. RIESGOS (JS) -->
+    <section id="riesgos" class="panel">
+      <h3>Riesgos</h3>
+      <div id="grid-riesgos" class="grid-cards" data-source="risks"></div>
+    </section>
+
+    <!-- 10. PROFESIONES (JS) -->
+    <section id="profesiones" class="panel">
+      <h3>IA y profesiones</h3>
+      <div id="grid-profesiones" class="grid-cards" data-source="professions"></div>
+    </section>
+
+    <!-- 11. ÉTICA -->
+    <section id="etica" class="panel">
+      <h3>Ética y sociedad</h3>
+      <div class="acordeon" id="acordeon-etica">
+        <button class="acordeon-item" data-respuesta="En general, la responsabilidad recae en quienes diseñan, entrenan y despliegan el sistema, no en la IA misma.">¿Quién es responsable cuando una IA se equivoca?</button>
+        <button class="acordeon-item" data-respuesta="Con leyes de protección de datos, consentimiento informado y buenas prácticas de seguridad al recolectar y almacenar información.">¿Cómo se deben proteger los datos?</button>
+        <button class="acordeon-item" data-respuesta="No completamente: aprende de datos creados por personas, y esos datos pueden contener sesgos.">¿Puede una IA ser completamente imparcial?</button>
+      </div>
+      <p id="respuesta-etica" class="respuesta-etica" aria-live="polite"></p>
+    </section>
+
+    <!-- 12. EDUCACIÓN -->
+    <section id="educacion" class="panel">
+      <h3>IA en la educación</h3>
+      <div class="comparacion">
+        <div class="card"><strong>Uso correcto</strong><ul><li>Estudiar y practicar</li><li>Pedir explicaciones</li><li>Generar preguntas</li><li>Organizar ideas</li></ul></div>
+        <div class="card acento"><strong>Uso incorrecto</strong><ul><li>Copiar tareas</li><li>Entregar respuestas sin comprenderlas</li><li>Depender completamente de la IA</li><li>No verificar información</li></ul></div>
+      </div>
+    </section>
+
+    <!-- MITOS (JS flip cards) -->
+    <section id="mitos" class="panel">
+      <h3>Mitos y realidades</h3>
+      <div id="grid-mitos" class="grid-cards" data-source="myths"></div>
+    </section>
+
+    <!-- GLOSARIO (JS) -->
+    <section id="glosario" class="panel">
+      <h3>Glosario</h3>
+      <div id="lista-glosario" class="lista-glosario" data-source="glossary"></div>
+    </section>
+
+    <!-- QUIZ (JS) -->
+    <section id="quiz" class="panel">
+      <h3>Quiz</h3>
+      <div id="quiz-contenedor"></div>
+    </section>
+
+    <!-- REFLEXIÓN -->
+    <section id="reflexion" class="panel">
+      <h3>Reflexión final</h3>
+      <blockquote>¿Cómo crees que la Inteligencia Artificial cambiará tu futura profesión?</blockquote>
+      <textarea id="reflexion-texto" rows="6" aria-label="Escribe tu reflexión"></textarea>
+      <button id="btn-guardar-reflexion" class="btn-primario">Guardar reflexión</button>
+      <p id="reflexion-estado" aria-live="polite"></p>
+    </section>
+
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
